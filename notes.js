@@ -34,7 +34,6 @@ const readNote = function(title){
 const addNote = (title , body)=>{
     const notes = loadNotes()
 
-    // const duplicateNotes = notes.filter((note)=> note.title === title)
     const duplicateNotes = notes.find((note)=> note.title === title)
 
     if(!duplicateNotes){
@@ -54,7 +53,6 @@ const addNote = (title , body)=>{
 
 
 const removeNote = (title)=>{
-    // console.log("removing note titled "+ title)
     const notes = loadNotes()
 
     const suitableNotes = notes.filter((note)=> note.title !== title )
